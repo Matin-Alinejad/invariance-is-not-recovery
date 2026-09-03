@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+results/*
+!results/README.md
+formal/**/.lake/
+formal/**/lake-packages/

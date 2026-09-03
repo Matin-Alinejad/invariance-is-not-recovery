@@ -1,0 +1,76 @@
+# Registered primary scaling experiment, seeds 0-9.
+output_dir: results/primary_scaling
+base:
+  seeds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  target_sampling: stratified_degree
+  targets_per_graph: 10
+  min_effective_samples: 10
+  insufficient_policy: keep_edge
+  max_conditioning_set_size: 3
+  mask_variables: all
+  masking_slope: 1.0
+  quadratic_a: 0.2
+  noise_distribution: gaussian
+  reference_p: 50
+  reference_n_over_p: 50
+  local_search_method: none
+  oracle_query_diagnostics_max_p: 20
+topologies:
+- name: random_regular_d2
+  enum: random_regular
+  params:
+    degree: 2
+  max_p: 150
+- name: er_expected_degree_2
+  enum: random
+  average_degree: 2
+  max_p: 150
+- name: small_world_k2
+  enum: small_world
+  params:
+    k: 2
+    p: 0.1
+  max_p: 100
+- name: scale_free_m2
+  enum: scale_free
+  params:
+    m: 2
+  max_p: 75
+p_grid:
+- 20
+- 50
+- 75
+- 100
+- 150
+sample_scaling:
+  gammas:
+  - 1.0
+  - 1.25
+ci_tests:
+- pearson
+alpha_schedules:
+- n_inverse_half
+sem_models:
+- linear
+signal_ranges:
+- - 0.5
+  - 1.0
+missingness_modes:
+- complete
+- self_masking_gaussian_preserving
+- self_masking_logistic_population
+missing_rates:
+- 0.0
+- 0.3
+masking_slopes:
+- 1.0

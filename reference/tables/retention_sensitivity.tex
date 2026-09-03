@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\small
+\renewcommand{\arraystretch}{1.13}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{@{}C{1.00}C{1.00}C{1.00}C{1.00}C{1.00}@{}}
+\toprule
+Missingness & Precision (\%) & Recall (\%) & $F_1$ (\%) & Usable records (\%) \\
+\midrule
+10\% & 98.66 & 99.98 & 99.31 & 78.79 \\
+30\% & 99.85 & 99.98 & 99.91 & 45.04 \\
+50\% & 99.93 & 99.67 & 99.80 & 21.86 \\
+\bottomrule
+\end{tabularx}
+\caption{Quadratic-mask retention sensitivity, averaged over the global random-regular and small-world conditions at $p\in\{50,100\}$. The usable-record fraction decreases monotonically with requested missingness, whereas $F_1$ does not.}
+\label{tab:retention-summary}
+\end{table}

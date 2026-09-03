@@ -1,0 +1,54 @@
+\begin{tikzpicture}[
+  x=1cm,y=1cm,
+  >=Latex,
+  every node/.style={font=\small,text=black!88},
+  stage/.style={circle,minimum size=8.5mm,inner sep=0pt,line width=0.9pt,fill=white,font=\small\bfseries},
+  desc/.style={align=center,inner sep=0pt,font=\footnotesize},
+  flow/.style={-{Latex[length=2.0mm,width=1.3mm]},line width=0.82pt,draw=black!52},
+]
+\definecolor{pipelineNavy}{HTML}{004488}
+\definecolor{pipelineTeal}{HTML}{117733}
+\definecolor{pipelineOchre}{HTML}{997700}
+\definecolor{pipelineRose}{HTML}{994455}
+
+\node[anchor=south,font=\small\bfseries,text=pipelineNavy] at (1.15,2.68) {Population};
+\draw[pipelineNavy,line width=1.25pt] (0.28,2.56) -- (2.02,2.56);
+\node[anchor=south,font=\small\bfseries,text=pipelineTeal] at (6.00,2.68) {Finite-sample bridge};
+\draw[pipelineTeal,line width=1.25pt] (2.48,2.56) -- (9.52,2.56);
+\node[anchor=south,font=\small\bfseries,text=pipelineOchre] at (10.90,2.68) {Search};
+\draw[pipelineOchre,line width=1.25pt] (9.92,2.56) -- (11.88,2.56);
+\node[anchor=south,font=\small\bfseries,text=pipelineRose] at (13.38,2.68) {Recovery};
+\draw[pipelineRose,line width=1.25pt] (12.28,2.56) -- (14.48,2.56);
+
+\coordinate (c1) at (1.15,1.72);
+\coordinate (c2) at (3.48,1.72);
+\coordinate (c3) at (5.82,1.72);
+\coordinate (c4) at (8.16,1.72);
+\coordinate (c5) at (10.90,1.72);
+\coordinate (c6) at (13.38,1.72);
+\draw[flow] (1.58,1.72) -- (3.05,1.72);
+\draw[flow] (3.91,1.72) -- (5.39,1.72);
+\draw[flow] (6.25,1.72) -- (7.73,1.72);
+\draw[flow] (8.59,1.72) -- (10.47,1.72);
+\draw[flow] (11.33,1.72) -- (12.95,1.72);
+
+\node[stage,draw=pipelineNavy,text=pipelineNavy] at (c1) {1};
+\node[stage,draw=pipelineTeal,text=pipelineTeal] at (c2) {2};
+\node[stage,draw=pipelineTeal,text=pipelineTeal] at (c3) {3};
+\node[stage,draw=pipelineTeal,text=pipelineTeal] at (c4) {4};
+\node[stage,draw=pipelineOchre,text=pipelineOchre] at (c5) {5};
+\node[stage,draw=pipelineRose,text=pipelineRose] at (c6) {6};
+
+\node[desc,anchor=north] at (1.15,1.22) {population CI};
+\node[desc,anchor=north,font=\footnotesize\bfseries] at (1.15,0.84) {preserved?};
+\node[desc,anchor=north] at (3.48,1.22) {usable records};
+\node[desc,anchor=north,font=\footnotesize\bfseries] at (3.48,0.84) {enough?};
+\node[desc,anchor=north] at (5.82,1.22) {finite CI test};
+\node[desc,anchor=north,font=\footnotesize\bfseries] at (5.82,0.84) {valid?};
+\node[desc,anchor=north] at (8.16,1.22) {CI decisions};
+\node[desc,anchor=north,font=\footnotesize\bfseries] at (8.16,0.84) {controlled?};
+\node[desc,anchor=north] at (10.90,1.22) {graph search};
+\node[desc,anchor=north,font=\footnotesize\bfseries] at (10.90,0.84) {sufficient?};
+\node[desc,anchor=north] at (13.38,1.22) {skeleton};
+\node[desc,anchor=north,font=\footnotesize\bfseries] at (13.38,0.84) {correct?};
+\end{tikzpicture}

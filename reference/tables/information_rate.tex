@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\small
+\renewcommand{\arraystretch}{1.16}
+\setlength{\tabcolsep}{6pt}
+\begin{tabularx}{\textwidth}{@{}L{0.72}C{1.28}@{}}
+\toprule
+Quantity & Exact expression in the self-masked pair family \\
+\midrule
+Parent retention & $\pi=c/\sqrt{1+a}$ \\
+Selected parent variance & $1/(1+a)$ \\
+Effective retained signal & $b_{\rm eff}=b/\sqrt{1+a}$ \\
+One-record observed KL & $\pi b^2/[2(1+a)]$ \\
+Concrete failure bound & $2m(1+b_{\rm eff}^2/4)^{-n_0/2}+m\exp(-\eta^2n\pi/2)$ \\
+Necessary $n$ & $\frac{2(1+a)}{\pi b^2}\log\!\frac{m}{4[-\log(1-\delta)]}$ \\
+\bottomrule
+\end{tabularx}
+\caption{Self-masked sparse-pair calibration. The exact expressions retain the masking dependence; the $\Theta(b^{-2}\log(m/\delta))$ shorthand applies only after fixing the positive masking parameters.}
+\label{tab:information-rate-summary}
+\end{table}

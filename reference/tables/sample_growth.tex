@@ -1,0 +1,26 @@
+\begin{table}[t]
+\centering
+\small
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\textwidth}{@{}C{0.62}C{1.02}C{1.13}C{0.98}C{1.25}@{}}
+\toprule
+$p$ & $n$ ($\gamma=1$) & $n$ ($\gamma=1.25$) & $\Delta n$ & Relative change \\
+\midrule
+20 & 1000 & 796 & -204 & -20.40\% \\
+50 & 2500 & 2500 & +0 & +0.00\% \\
+75 & 3750 & 4151 & +401 & +10.69\% \\
+100 & 5000 & 5947 & +947 & +18.94\% \\
+150 & 7500 & 9871 & +2371 & +31.61\% \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{Paired graph-recovery effects for $p>50$}} \\
+Metric & Mean change (pp) & CI $>0$ & CI $<0$ & CI includes $0$ \\
+\cmidrule(lr){1-5}
+$F_1$ & +0.13 & 2 & 0 & 52 \\
+Precision & +0.10 & 0 & 0 & 54 \\
+Recall & +0.11 & 4 & 0 & 50 \\
+\bottomrule
+\end{tabularx}
+\caption{Sample-size schedules and paired finite-grid effects. The upper five rows give the two schedules, which coincide at $p=50$; hence $\gamma=1.25$ uses fewer samples below the anchor and more above it. The lower three rows summarize paired 10-seed graph-recovery changes for $p>50$ across global and target-restriction evaluations; interval counts refer to 95\% paired intervals. The comparison is finite-sample and is not used to fit an asymptotic exponent.}
+\label{tab:growth-summary}
+\end{table}

@@ -1,0 +1,9 @@
+{
+  "failed_cells": 0,
+  "nonfinite_f1": 0,
+  "deterministic_f1_bound_violations": 0,
+  "same_sample_calibration_rows": 0,
+  "same_realization_standardization_rows": 0,
+  "sanitizer_clipping_active_rows": 0,
+  "target_rows_treated_as_independent_for_ci": 0
+}

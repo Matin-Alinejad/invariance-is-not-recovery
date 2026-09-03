@@ -1,0 +1,6 @@
+block,groups,groups_over_005,max_f1_halfwidth95,fixed_design_block,note
+primary_scaling_10_seeds,204,6,0.0695277913115026,True,Triggered the prespecified uniform seeds 10–19 precision extension.
+primary_scaling_20_seeds,204,0,0.040512763473563,False,Descriptive precision-extension analysis; 0/204 groups remain above 0.05.
+significance_threshold_sensitivity,72,0,0.0391751336776696,True,No precision extension required.
+retention_sensitivity,24,0,0.0090486286511928,True,No precision extension required.
+matched_local_global_absolute_f1,72,5,0.0614283283161041,True,Five absolute-F1 groups exceed 0.05; the paper's matched local-vs-global comparison uses paired graph-level contrasts rather than this absolute-F1 gate.

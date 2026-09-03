@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\small
+\renewcommand{\arraystretch}{1.13}
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\textwidth}{@{}L{1.38}C{0.72}C{0.58}C{0.82}C{0.78}C{0.72}@{}}
+\toprule
+Experiment & Runs & Seeds & Groups & $h>0.05$ & Max. $h$ \\
+\midrule
+Main scaling (10 seeds) & 1020 & 10 & 204 & 6/204 & 0.07 \\
+Main scaling (20 seeds) & 2040 & 20 & 204 & 0/204 & 0.04 \\
+Significance schedule & 360 & 10 & 72 & 0/72 & 0.04 \\
+Retention & 120 & 10 & 24 & 0/24 & 0.01 \\
+Dedicated local & 240 & 10 & 24 paired & 0/24 & 0.03 \\
+\bottomrule
+\end{tabularx}
+\caption{Empirical study size and Monte Carlo precision, where $h$ is the Student-$t$ 95\% $F_1$ half-width. A prespecified precision rule extended the main scaling experiment uniformly from 10 to 20 graph seeds after six groups exceeded $h=0.05$ in the 10-seed analysis; the extension was applied to every main-scaling condition. The 20-seed summaries are descriptive, while paired inferential contrasts retain the 10-seed design.}
+\label{tab:evidence-program}
+\end{table}

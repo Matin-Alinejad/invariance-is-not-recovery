@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\small
+\renewcommand{\arraystretch}{1.13}
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\textwidth}{@{}L{1.35}C{0.93}C{0.93}C{0.93}C{0.93}C{0.93}@{}}
+\toprule
+& \multicolumn{3}{c}{Paired local-minus-global $F_1$ interval} & \multicolumn{2}{c}{Batch CI-test saving} \\
+\cmidrule(lr){2-4}\cmidrule(l){5-6}
+Topology & CI $>0$ & CI $<0$ & Includes $0$ & Minimum & Maximum \\
+\midrule
+Erd\H{o}s--R\'enyi & 0 & 4 & 2 & 15.94\% & 61.84\% \\
+Random regular & 0 & 2 & 4 & 10.84\% & 63.82\% \\
+Small world & 0 & 4 & 2 & 11.54\% & 64.25\% \\
+Scale free & 3 & 1 & 2 & 30.74\% & 69.59\% \\
+\bottomrule
+\end{tabularx}
+\caption{Matched dedicated-local validation on identical targets, graphs, and samples. Savings compare processing the selected targets locally with one global fit. CI-test savings are positive in all 24 conditions, while the $F_1$ difference depends on topology and observation regime.}
+\label{tab:local-summary}
+\end{table}

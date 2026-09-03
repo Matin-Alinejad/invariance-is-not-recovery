@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\small
+\renewcommand{\arraystretch}{1.13}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{@{}L{1.65}C{0.95}C{0.80}C{0.80}C{0.80}@{}}
+\toprule
+Metric & Mean change & CI $>0$ & CI $<0$ & CI includes $0$ \\
+\midrule
+$F_1$ (pp) & -1.52 & 0 & 15 & 21 \\
+Precision (pp) & -2.76 & 0 & 16 & 20 \\
+Recall (pp) & 0.14 & 1 & 0 & 35 \\
+False positives & 1.58 & 16 & 0 & 20 \\
+CI tests & 1262.66 & 36 & 0 & 0 \\
+\bottomrule
+\end{tabularx}
+\caption{Paired contrasts for fixed $0.05$ minus the practical $n^{-1/2}$ schedule across 36 matched conditions. The last three columns count 95\% paired intervals lying wholly above zero, wholly below zero, or including zero. The practical $n^{-1/2}$ schedule is an empirical design choice, not the margin-dependent Kalisch--B\"uhlmann significance sequence \citep{kalisch2007estimating}.}
+\label{tab:alpha-summary}
+\end{table}
